@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan URK24CS1112 - Fitness Equipment Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">F</div>
+    <div>
+      <h1>Jonathan URK24CS1112 Fitness Equipment Store</h1>
+      <p>Workout essentials. A stronger everyday.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <p id="intro" tabindex="0" role="button" aria-label="Hide introduction">
+        Find the right equipment for your routine. Click this introduction to hide it.
+      </p>
+      <div class="actions">
+        <button id="welcome-button" type="button">Get a Welcome</button>
+        <button id="show-intro" class="secondary" type="button">Show Introduction</button>
+      </div>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section aria-labelledby="equipment-title">
+      <h2 id="equipment-title">Equipment Essentials</h2>
+      <div class="products">
+        <article>
+          <svg viewBox="0 0 240 160" aria-hidden="true">
+            <path d="M65 80h110M50 55v50M65 45v70M175 45v70M190 55v50"/>
+          </svg>
+          <h3>Dumbbells</h3>
+          <p>A solid start for strength training.</p>
+          <strong>Rs. 2,500</strong>
+          <button class="choose" data-price="2500" type="button">Use This Price</button>
+        </article>
+        <article>
+          <svg viewBox="0 0 240 160" aria-hidden="true">
+            <path d="M40 115h155l-20-20H65zM155 95l-15-65h35M125 30h50M155 60h30"/>
+          </svg>
+          <h3>Treadmill</h3>
+          <p>Make room for your daily miles.</p>
+          <strong>Rs. 28,000</strong>
+          <button class="choose" data-price="28000" type="button">Use This Price</button>
+        </article>
+        <article>
+          <svg viewBox="0 0 240 160" aria-hidden="true">
+            <circle cx="85" cy="100" r="28"/>
+            <path d="M85 100l50-45 25 55H85M130 55h25M110 40h35M158 100l15-65h20M60 130h125"/>
+          </svg>
+          <h3>Exercise Bike</h3>
+          <p>A steady ride, right at home.</p>
+          <strong>Rs. 15,000</strong>
+          <button class="choose" data-price="15000" type="button">Use This Price</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="calculator" aria-labelledby="cost-title">
+      <h2 id="cost-title">Equipment Total Cost</h2>
+      <p>Choose a price above or enter your own, then add the delivery charge.</p>
+      <form id="cost-form">
+        <div class="fields">
+          <label for="price">Equipment price (Rs.)
+            <input id="price" type="number" min="0" step="0.01" placeholder="e.g. 2500" required>
+          </label>
+          <label for="delivery">Delivery charge (Rs.)
+            <input id="delivery" type="number" min="0" step="0.01" value="150" required>
+          </label>
+        </div>
+        <button type="submit">Calculate Total</button>
+        <label for="result">Total cost (Rs.)
+          <input id="result" type="text" readonly placeholder="Your total will appear here">
+        </label>
+        <div id="box" role="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Jonathan URK24CS1112 - Fitness Store, Coimbatore</p>
+    <p>2026-2027. Web Technology Lab Batch 2. All Rights Reserved.</p>
+  </footer>
+  <script src="vendor/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
